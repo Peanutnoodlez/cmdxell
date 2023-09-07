@@ -124,7 +124,7 @@ static int send_rrq(struct udp_pcb *pcb, ip_addr_t server_addr, uint16_t port,
   if (udp_sendto(pcb, p, &server_addr, port) != 0) {
     console_clrline();
     printf("TFTP: Failed to send RRQ packet.\n");
-    //rc = -1;
+    rc = -1;
   }
 
   pbuf_free(p);
